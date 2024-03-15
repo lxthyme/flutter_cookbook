@@ -1,0 +1,4 @@
+[submodule "packages/flutter_unit"]
+	path = packages/flutter_unit
+	url = git@github.com:lxthyme/FlutterUnit.git
+	branch = damon/fixed
