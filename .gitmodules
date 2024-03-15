@@ -2,3 +2,7 @@
 	path = packages/flutter_unit
 	url = git@github.com:lxthyme/FlutterUnit.git
 	branch = damon/fixed
+[submodule "packages/gsy_app"]
+	path = packages/gsy_app
+	url = git@github.com:lxthyme/github_app_flutter.git
+	branch = damon/fixed
