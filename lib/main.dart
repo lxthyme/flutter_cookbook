@@ -1,7 +1,7 @@
 import 'package:app/app.dart';
 import 'package:dual_screen/dual_screen.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
@@ -52,20 +52,20 @@ void main() async {
       defaultTargetPlatform != TargetPlatform.windows &&
       defaultTargetPlatform != TargetPlatform.macOS) {
     WidgetsFlutterBinding.ensureInitialized();
-    try {
-      await Firebase.initializeApp(
-        options: DefaultFirebaseOptions.currentPlatform,
-      );
-      FlutterError.onError = (details) {
-        FirebaseCrashlytics.instance.recordFlutterFatalError(details);
-      };
-      PlatformDispatcher.instance.onError = (exception, stackTrace) {
-        FirebaseCrashlytics.instance.recordError(exception, stackTrace, fatal: true);
-        return true;
-      };
-    } catch (e) {
-      debugPrint('-->Firebase.instance error: $e');
-    }
+    // try {
+    //   await Firebase.initializeApp(
+    //     options: DefaultFirebaseOptions.currentPlatform,
+    //   );
+    //   FlutterError.onError = (details) {
+    //     FirebaseCrashlytics.instance.recordFlutterFatalError(details);
+    //   };
+    //   PlatformDispatcher.instance.onError = (exception, stackTrace) {
+    //     FirebaseCrashlytics.instance.recordError(exception, stackTrace, fatal: true);
+    //     return true;
+    //   };
+    // } catch (e) {
+    //   debugPrint('-->Firebase.instance error: $e');
+    // }
   }
   galleryApp();
   // entrypointFlutterUnit();
